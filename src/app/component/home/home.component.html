@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=du, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Genre</th>
+                <th>Image</th>
+            </thead>
+            <tbody >
+                <tr *ngFor="let d of datas">
+                    <td>{{ d.name }}</td>
+                    <td>{{ d.desc }}</td>
+                    <td>{{d.genre_movie.name_genre}}</td>
+                    <td>
+                        <img src='http://localhost:8000/{{d.image}}' alt="Not Found">
+                    </td>
+                    <Button (click)="DelUser(d.id)">Delete</Button>
+                    <a [routerLink]="['/edit/', d.id]">Edit</a>
+                </tr>
+            </tbody>
+        </table>
+
+        <a routerLink="add">add</a>
+       
+        
+    </div>
+   
+</body>
+</html>
