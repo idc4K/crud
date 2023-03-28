@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './component/edit/edit.component';
 import { AddComponent } from './component/add/add.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { AddComponent } from './component/add/add.component';
     HomeComponent,
     EditComponent,
     AddComponent,
+    DashboardComponent
+   
   
   ],
   imports: [
